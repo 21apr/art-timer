@@ -8,6 +8,11 @@ body {
     background-color: azure;
 }
 
+header {
+    display: flex;
+    align-items: center;
+}
+
 .center {
     margin: auto;
     width: 80%;
@@ -37,6 +42,10 @@ body {
     grid-row: -2;
 }
 
+.menu-item {
+    margin: 10px;
+}
+
 .desc {
     display: flex;
     justify-content: center;
@@ -47,11 +56,17 @@ body {
     background-color: white;
 }
 
+#name {
+    margin: auto;
+    font-size: 250%;
+    font-weight: 900;
+}
+
 .timer__items {
     display: flex;
     font-size: 120px;
   }
-  .timer__item {
+.timer__item {
     position: relative;
     min-width: 60px;
     margin-left: 10px;
@@ -59,7 +74,7 @@ body {
     padding-bottom: 15px;
     text-align: center;
   }
-  .timer__item::before {
+.timer__item::before {
     content: attr(data-title);
     display: block;
     position: absolute;
@@ -67,9 +82,16 @@ body {
     bottom: 0;
     transform: translateX(-50%);
     font-size: 14px;
-  }
-  .timer__item:not(:last-child)::after {
+}
+.timer__item:not(:last-child)::after {
     content: ':';
     position: absolute;
     right: -42px;
-  }
+}
+
+dialog {
+    background: rgb(255, 255, 255);
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}

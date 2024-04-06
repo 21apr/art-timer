@@ -9,22 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css"> -->
     <script src="script.js"></script>
 </head>
 <body>
     <section class="center">
-        <header class="menu">
-            <nav>
-                <div class="menu-item"><a href="http://"><img src="https://png.pngtree.com/png-vector/20190418/ourmid/pngtree-vector-pencil-icon-png-image_956074.jpg" alt="logo" width=50px></a></div>
-                <div class="menu-item"><a href="http://">one</a></div>
-                <div class="menu-item"><a href="http://">Settings</a></div>
-            </nav>
+        <header>
+                <div class="menu-item"><i class='bx bx-pencil' style="font-size: 200%;">Logo</i></div>
+                <div id="name">ART TIMER</div>
+                <div class="menu">
+                    <div class="menu-item" style="display: none;"><a href="http://">Sign In</a></div>
+                    <div class="menu-item" style="display: none;"><a href="http://">Register</a></div>
+                    <div class="menu-item"><a href="http://"><i class='bx bxs-cog'></i></a></div>
+                </div>
         </header>
         <div class="desc">
             <div class="timer">
                 <div class="timer__items">
-                    <div class="timer__item timer__days">00</div>
+                    <!-- <div class="timer__item timer__days">00</div> -->
                     <div class="timer__item timer__hours">00</div>
                     <div class="timer__item timer__minutes">00</div>
                     <div class="timer__item timer__seconds">00</div>
@@ -32,7 +35,31 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="menu-item"><a href="http://">About us</a></div>
+            <div class="menu-item"><button id="openDialog">Открыть окно</button>
+                <dialog>
+                    <p>
+                        Полинезийцы называют Млечный путь
+                        Манго-Роа-И-Ата, что в переводе с маори
+                        означает «Длинная акула на рассвете».
+                    </p>
+                    <p>
+                        <button id="closeDialog">
+                            Закрыть окно
+                        </button>
+                    </p>
+                </dialog>
+                <script>
+                    var dialog = document.querySelector('dialog');
+                    document.querySelector('#openDialog').onclick =
+                        function () {
+                            dialog.showModal(); // Показываем диалоговое окно
+                        };
+                    document.querySelector('#closeDialog').onclick =
+                        function () {
+                            dialog.close(); // Прячем диалоговое окно
+                        };
+                </script>
+            </div>
             <div class="menu-item"><a href="http://">one</a></div>
             <div class="menu-item"><a href="http://">one</a></div>
         </footer>
