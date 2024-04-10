@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // date entered on the timer. in developing. time used - 5 minutes
-    const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0o1);
+    const deadline = new Date();
+    deadline.setMinutes(deadline.getMinutes() + 5);
     // id таймера
     let timerId = null;
     // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
