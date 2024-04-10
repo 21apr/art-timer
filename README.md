@@ -1,1 +1,6 @@
-# art-timer
+# Hi! This my first project on HitGub. Art-Timer
+And just my first project :smile:
+
+I want to create a drawing project for **parents and children**.
+
+*project in development*
