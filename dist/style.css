@@ -1,0 +1,250 @@
+body {
+  background-color: azure;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+
+button {
+  background-color: white;
+  color: #3c2360;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  margin: 5px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  transform: translateY(4px);
+}
+
+.shadow {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+header, footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0 30px;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+  height: 98vh;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  background-color: rgba(141, 91, 215, 0.6);
+  display: grid;
+  grid-template-rows: repeat(10, 10%);
+  backdrop-filter: blur(2px);
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-item {
+  margin: 10px;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2/10;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#name {
+  margin: auto;
+  font-size: 250%;
+  font-weight: 900;
+  color: white;
+}
+
+i {
+  font-size: xx-large;
+  color: white;
+}
+
+.work-area {
+  display: grid;
+  grid-template-rows: 4fr;
+}
+
+.selected-image {
+  background-color: rgba(141, 91, 215, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 5px 70px;
+  grid-row: 1/2;
+}
+
+#draw {
+  position: absolute;
+  font-size: 130%;
+  margin: 5px 10px;
+  text-align: left;
+  font-style: italic;
+  color: #616e6e;
+}
+
+.selected-image p {
+  margin: 100px;
+  font-size: 250%;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  grid-row: 3;
+}
+
+.timer__items {
+  display: flex;
+  font-size: 350%;
+  /* font-size: clamp(12.5rem, -6.25rem + 60vw, 31.25rem); */
+}
+
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.timer__item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -27px;
+}
+
+.custom-num {
+  margin: 0 10px;
+  color: #fff;
+  display: flex;
+  width: 1.2em;
+  height: 2em;
+  border: 1px #fff solid;
+  border-radius: 3em;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.num-input {
+  font-size: 1em;
+  font-family: monospace;
+  text-align: center;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.num-input:focus {
+  outline: none;
+}
+
+.custom-num i {
+  font-size: 0.7em;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  margin-top: 3%;
+  max-width: 80%;
+  grid-row: 4;
+  flex-flow: row wrap;
+}
+
+.buttons button, dialog button {
+  background-color: #3c2360;
+  color: white;
+}
+
+.buttons button:hover, dialog button:hover {
+  background-color: #7bd8b9;
+}
+
+dialog {
+  background: white;
+  max-width: 600px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+dialog h1, h2 {
+  text-align: center;
+}
+
+dialog h1 {
+  text-decoration: solid;
+  font-size: 250%;
+}
+
+.footnote {
+  font-size: 75%;
+  color: #4d7575;
+  padding-left: 100px;
+  text-align: right;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -32,4 +32,35 @@ document.addEventListener('DOMContentLoaded', function () {
     countdownTimer();
     // вызываем функцию countdownTimer каждую секунду
     timerId = setInterval(countdownTimer, 1000);
+});
+
+const customNum = document.querySelectorAll('.custom-num');
+
+customNum.forEach(num => {
+  const numInput = num.querySelector('.num-input');
+  const arrUp = num.querySelector('.arr-up');
+  const arrDown = num.querySelector('.arr-down');
+
+  arrUp.addEventListener('click', () => {
+    numInput.stepUp();
+    checkMaxMin();
   });
+
+  arrDown.addEventListener('click', () => {
+    numInput.stepDown();
+    checkMaxMin();
+  });
+
+  numInput.addEventListener('input', checkMaxMin);
+
+  function checkMaxMin() {
+    const numInputValue = parseInt(numInput.value);
+    const numInputMax = parseInt(numInput.max);
+    const numInputMin = parseInt(numInput.min);
+
+    if(numInputValue === numInputMax) {
+      arrUp.style.color = "#666"
+      arrUp.style.cursor = "not-allowed";
+    } else {console.log('no')}
+  };
+});
